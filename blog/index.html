@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ブログ｜進学ゼミナール</title>
+  <meta name="description" content="進学ゼミナールのブログ。学習のコツや受験情報、教室の最新ニュースをお届けします。">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/cta-bar.css">
+  <link rel="stylesheet" href="../css/pages/blog.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body class="has-header has-cta-bar">
+  <header class="header">
+    <div class="header__inner">
+      <div class="header__logo"><a href="../"><img src="../images/logo.svg" alt="進学ゼミナール" width="200" height="50"></a></div>
+      <nav class="header__nav" aria-label="メインナビゲーション">
+        <a href="../" class="header__nav-link">ホーム</a>
+        <a href="../courses/" class="header__nav-link">コース・料金</a>
+        <a href="../teachers/" class="header__nav-link">講師紹介</a>
+        <a href="../access/" class="header__nav-link">教室案内</a>
+        <a href="./" class="header__nav-link">ブログ</a>
+        <a href="../contact/" class="header__nav-link">お問い合わせ</a>
+      </nav>
+      <div class="header__actions">
+        <a href="tel:03-1234-5678" class="header__phone"><span class="header__phone-icon">&#9742;</span>03-1234-5678</a>
+        <a href="../contact/" class="btn btn--primary header__cta">無料体験はこちら</a>
+      </div>
+      <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">
+        <span class="hamburger__line"></span><span class="hamburger__line"></span><span class="hamburger__line"></span>
+      </button>
+    </div>
+  </header>
+  <nav class="mobile-menu" aria-label="モバイルナビゲーション">
+    <a href="../" class="mobile-menu__link">ホーム</a>
+    <a href="../courses/" class="mobile-menu__link">コース・料金</a>
+    <a href="../teachers/" class="mobile-menu__link">講師紹介</a>
+    <a href="../access/" class="mobile-menu__link">教室案内</a>
+    <a href="./" class="mobile-menu__link">ブログ</a>
+    <a href="../contact/" class="mobile-menu__link">お問い合わせ</a>
+    <a href="tel:03-1234-5678" class="mobile-menu__phone"><span>&#9742;</span> 03-1234-5678</a>
+    <a href="../contact/" class="btn btn--primary btn--block mobile-menu__cta">無料体験を申し込む</a>
+  </nav>
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <h1 class="page-header__title">ブログ</h1>
+        <p class="page-header__breadcrumb"><a href="../">ホーム</a> &gt; ブログ</p>
+      </div>
+    </div>
+
+    <section class="section" id="blog-list">
+      <div class="container">
+        <!-- ★差替え：カテゴリ -->
+        <div class="blog-categories">
+          <a href="#" class="blog-category is-active">すべて</a>
+          <a href="#" class="blog-category">学習のコツ</a>
+          <a href="#" class="blog-category">受験情報</a>
+          <a href="#" class="blog-category">教室ニュース</a>
+          <a href="#" class="blog-category">イベント</a>
+        </div>
+
+        <!-- ★差替え：記事一覧 -->
+        <div class="blog-grid">
+          <a href="./article-01.html" class="blog-card">
+            <div class="blog-card__image"><img src="../images/blog-thumb-01.svg" alt="" width="400" height="250"></div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta"><span class="blog-card__category">学習のコツ</span><time class="blog-card__date" datetime="2026-03-15">2026.03.15</time></div>
+              <h2 class="blog-card__title">中学生の定期テスト対策｜成績を上げる5つの勉強法</h2>
+              <p class="blog-card__excerpt">定期テストで成績を上げるために、日々の学習で実践できる効果的な勉強法をご紹介します。</p>
+            </div>
+          </a>
+          <a href="#" class="blog-card">
+            <div class="blog-card__image"><img src="../images/blog-thumb-02.svg" alt="" width="400" height="250"></div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta"><span class="blog-card__category">受験情報</span><time class="blog-card__date" datetime="2026-03-10">2026.03.10</time></div>
+              <h2 class="blog-card__title">2026年度 都立高校入試の変更点まとめ</h2>
+              <p class="blog-card__excerpt">来年度の都立高校入試で変更されるポイントを詳しく解説します。</p>
+            </div>
+          </a>
+          <a href="#" class="blog-card">
+            <div class="blog-card__image"><img src="../images/blog-thumb-03.svg" alt="" width="400" height="250"></div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta"><span class="blog-card__category">教室ニュース</span><time class="blog-card__date" datetime="2026-03-05">2026.03.05</time></div>
+              <h2 class="blog-card__title">春期講習のご案内｜新学年に向けた準備を始めよう</h2>
+              <p class="blog-card__excerpt">春期講習のスケジュールと内容をご案内します。新学年のスタートダッシュを決めましょう。</p>
+            </div>
+          </a>
+          <a href="#" class="blog-card">
+            <div class="blog-card__image"><img src="../images/blog-thumb-04.svg" alt="" width="400" height="250"></div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta"><span class="blog-card__category">学習のコツ</span><time class="blog-card__date" datetime="2026-02-28">2026.02.28</time></div>
+              <h2 class="blog-card__title">英語が苦手な中学生へ｜基礎から始める勉強法</h2>
+              <p class="blog-card__excerpt">英語が苦手なお子さまでも確実に力がつく学習法を、段階的にご紹介します。</p>
+            </div>
+          </a>
+          <a href="#" class="blog-card">
+            <div class="blog-card__image"><img src="../images/blog-thumb-05.svg" alt="" width="400" height="250"></div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta"><span class="blog-card__category">イベント</span><time class="blog-card__date" datetime="2026-02-20">2026.02.20</time></div>
+              <h2 class="blog-card__title">合格体験談発表会を開催しました</h2>
+              <p class="blog-card__excerpt">先日行われた合格体験談発表会の様子をレポートします。先輩たちの声をお届けします。</p>
+            </div>
+          </a>
+          <a href="#" class="blog-card">
+            <div class="blog-card__image"><img src="../images/blog-thumb-06.svg" alt="" width="400" height="250"></div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta"><span class="blog-card__category">受験情報</span><time class="blog-card__date" datetime="2026-02-15">2026.02.15</time></div>
+              <h2 class="blog-card__title">高校受験に向けた中2冬からの学習計画</h2>
+              <p class="blog-card__excerpt">中学2年生の冬から始める、志望校合格に向けた効果的な学習計画の立て方を解説します。</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- ★差替え：ページネーション -->
+        <nav class="pagination" aria-label="ページ送り">
+          <span class="pagination__item is-current">1</span>
+          <a href="#" class="pagination__item">2</a>
+          <a href="#" class="pagination__item">3</a>
+          <span class="pagination__dots">...</span>
+          <a href="#" class="pagination__item">8</a>
+          <a href="#" class="pagination__next" aria-label="次のページ">&gt;</a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="contact-cta">
+      <div class="container">
+        <p class="contact-cta__lead">まずは無料体験授業から始めてみませんか？</p>
+        <div class="contact-cta__columns">
+          <div class="contact-cta__column"><a href="../contact/" class="btn btn--white btn--lg btn--block">無料体験授業を申し込む</a></div>
+          <div class="contact-cta__column">
+            <a href="tel:03-1234-5678" class="contact-cta__phone-number">&#9742; 03-1234-5678</a>
+            <p class="contact-cta__phone-time">受付時間：平日 14:00〜22:00 / 土曜 10:00〜20:00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <div class="footer__logo"><img src="../images/logo.svg" alt="進学ゼミナール" width="200" height="50"></div>
+        <p class="footer__catchcopy">ワンランク上の志望校を目指す。</p>
+        <dl class="footer__info"><dt>住所</dt><dd>〒154-0024 東京都世田谷区三軒茶屋1-2-3 三茶ビル3F</dd><dt>電話番号</dt><dd>TEL: 03-1234-5678</dd><dt>営業時間</dt><dd>平日 14:00〜22:00 / 土曜 10:00〜20:00</dd></dl>
+        <div class="footer__sns"><a href="#" aria-label="Instagram">&#9679;</a><a href="#" aria-label="LINE">&#9679;</a></div>
+      </div>
+      <div><p class="footer__nav-title">ページ</p><ul class="footer__nav-list"><li><a href="../">ホーム</a></li><li><a href="../courses/">コース・料金</a></li><li><a href="../teachers/">講師紹介</a></li><li><a href="../access/">教室案内</a></li></ul></div>
+      <div><p class="footer__nav-title">情報</p><ul class="footer__nav-list"><li><a href="./">ブログ</a></li><li><a href="../contact/">お問い合わせ</a></li><li><a href="#">プライバシーポリシー</a></li></ul></div>
+      <div><p class="footer__nav-title">お問い合わせ</p><ul class="footer__nav-list"><li><a href="tel:03-1234-5678">03-1234-5678</a></li><li><a href="../contact/">無料体験のお申し込み</a></li><li><a href="../contact/">資料請求</a></li></ul></div>
+    </div>
+    <div class="footer__bottom"><p class="footer__copyright">&copy; 2026 進学ゼミナール All Rights Reserved.</p></div>
+  </footer>
+  <div class="cta-bar">
+    <div class="cta-bar__inner">
+      <a href="tel:03-1234-5678" class="cta-bar__phone"><span class="cta-bar__phone-icon">&#9742;</span><span class="cta-bar__phone-number">03-1234-5678</span><span class="cta-bar__phone-time">平日14:00〜22:00</span></a>
+      <a href="../contact/" class="cta-bar__button">&#9998; 無料体験・資料請求</a>
+    </div>
+  </div>
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+/* ===================================
+   CTA Bar — 固定CTAバー
+   Template 02: Blue
+   =================================== */
+
+.cta-bar {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 900;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  animation: ctaSlideIn 0.5s ease 1s both;
+}
+
+@keyframes ctaSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cta-bar__phone {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-white);
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  transition: box-shadow 0.2s ease;
+}
+.cta-bar__phone:hover {
+  box-shadow: var(--shadow-hover);
+}
+.cta-bar__phone-icon {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+}
+.cta-bar__phone-number {
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-darker);
+}
+.cta-bar__phone-time {
+  font-size: 0.6875rem;
+  color: var(--color-text-muted);
+  display: block;
+}
+
+.cta-bar__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--color-accent);
+  color: var(--color-white);
+  padding: 14px 24px;
+  border-radius: var(--radius);
+  font-weight: var(--font-weight-bold);
+  font-size: 0.9375rem;
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.3);
+  transition: all 0.25s ease;
+}
+.cta-bar__button:hover {
+  background: var(--color-accent-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+}
+
+/* === SP: 全幅バー === */
+@media (max-width: 768px) {
+  .cta-bar {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    flex-direction: row;
+    gap: 0;
+    border-radius: 0;
+    animation: none;
+  }
+  .cta-bar__phone {
+    flex: 1;
+    border-radius: 0;
+    box-shadow: 0 -2px 8px rgba(27, 42, 74, 0.08);
+    flex-direction: column;
+    gap: 2px;
+    padding: 10px 12px;
+  }
+  .cta-bar__phone-number {
+    font-size: 0.9375rem;
+  }
+  .cta-bar__button {
+    flex: 1;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 14px 12px;
+    font-size: 0.875rem;
+  }
+  .has-cta-bar {
+    padding-bottom: 72px;
+  }
+}
+@media (max-width: 480px) {
+  .cta-bar__phone-number {
+    font-size: 0.8125rem;
+  }
+  .cta-bar__button {
+    font-size: 0.8125rem;
+  }
+}

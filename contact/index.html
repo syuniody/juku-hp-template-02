@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ｜進学ゼミナール</title>
+  <meta name="description" content="進学ゼミナールへのお問い合わせ・無料体験のお申し込みはこちら。お気軽にご相談ください。">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/cta-bar.css">
+  <link rel="stylesheet" href="../css/pages/contact.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body class="has-header has-cta-bar">
+  <header class="header">
+    <div class="header__inner">
+      <div class="header__logo"><a href="../"><img src="../images/logo.svg" alt="進学ゼミナール" width="200" height="50"></a></div>
+      <nav class="header__nav" aria-label="メインナビゲーション">
+        <a href="../" class="header__nav-link">ホーム</a>
+        <a href="../courses/" class="header__nav-link">コース・料金</a>
+        <a href="../teachers/" class="header__nav-link">講師紹介</a>
+        <a href="../access/" class="header__nav-link">教室案内</a>
+        <a href="../blog/" class="header__nav-link">ブログ</a>
+        <a href="./" class="header__nav-link">お問い合わせ</a>
+      </nav>
+      <div class="header__actions">
+        <a href="tel:03-1234-5678" class="header__phone"><span class="header__phone-icon">&#9742;</span>03-1234-5678</a>
+        <a href="./" class="btn btn--primary header__cta">無料体験はこちら</a>
+      </div>
+      <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">
+        <span class="hamburger__line"></span><span class="hamburger__line"></span><span class="hamburger__line"></span>
+      </button>
+    </div>
+  </header>
+  <nav class="mobile-menu" aria-label="モバイルナビゲーション">
+    <a href="../" class="mobile-menu__link">ホーム</a>
+    <a href="../courses/" class="mobile-menu__link">コース・料金</a>
+    <a href="../teachers/" class="mobile-menu__link">講師紹介</a>
+    <a href="../access/" class="mobile-menu__link">教室案内</a>
+    <a href="../blog/" class="mobile-menu__link">ブログ</a>
+    <a href="./" class="mobile-menu__link">お問い合わせ</a>
+    <a href="tel:03-1234-5678" class="mobile-menu__phone"><span>&#9742;</span> 03-1234-5678</a>
+    <a href="./" class="btn btn--primary btn--block mobile-menu__cta">無料体験を申し込む</a>
+  </nav>
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <h1 class="page-header__title">お問い合わせ</h1>
+        <p class="page-header__breadcrumb"><a href="../">ホーム</a> &gt; お問い合わせ</p>
+      </div>
+    </div>
+
+    <section class="section" id="contact-form">
+      <div class="container">
+        <div class="contact-layout">
+          <div class="contact-layout__main">
+            <div class="section-title section-title--left">
+              <span class="section-title__label">Contact Form</span>
+              <h2 class="section-title__heading">フォームでのお問い合わせ</h2>
+            </div>
+            <p class="contact-lead">無料体験授業のお申し込み・資料請求・ご質問など、お気軽にお問い合わせください。<br>通常1営業日以内にご返信いたします。</p>
+
+            <!-- ★差替え：フォーム -->
+            <form class="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+              <input type="hidden" name="form-name" value="contact">
+              <p class="hidden" style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+
+              <div class="form__group">
+                <label class="form__label" for="name">お名前（保護者様）<span class="form__required">必須</span></label>
+                <input type="text" id="name" name="name" class="form__input" placeholder="例：田中 太郎" required>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="furigana">ふりがな<span class="form__required">必須</span></label>
+                <input type="text" id="furigana" name="furigana" class="form__input" placeholder="例：たなか たろう" required>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="email">メールアドレス<span class="form__required">必須</span></label>
+                <input type="email" id="email" name="email" class="form__input" placeholder="例：example@email.com" required>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="phone">電話番号</label>
+                <input type="tel" id="phone" name="phone" class="form__input" placeholder="例：090-1234-5678">
+              </div>
+
+              <!-- ★差替え：学年選択肢 -->
+              <div class="form__group">
+                <label class="form__label" for="grade">お子さまの学年<span class="form__required">必須</span></label>
+                <select id="grade" name="grade" class="form__select" required>
+                  <option value="">選択してください</option>
+                  <option value="小学4年">小学4年</option>
+                  <option value="小学5年">小学5年</option>
+                  <option value="小学6年">小学6年</option>
+                  <option value="中学1年">中学1年</option>
+                  <option value="中学2年">中学2年</option>
+                  <option value="中学3年">中学3年</option>
+                  <option value="高校1年">高校1年</option>
+                  <option value="高校2年">高校2年</option>
+                  <option value="高校3年">高校3年</option>
+                  <option value="その他">その他</option>
+                </select>
+              </div>
+
+              <!-- ★差替え：お問い合わせ種別 -->
+              <div class="form__group">
+                <label class="form__label">お問い合わせ内容<span class="form__required">必須</span></label>
+                <div class="form__checkboxes">
+                  <label class="form__checkbox"><input type="checkbox" name="inquiry[]" value="無料体験授業"> 無料体験授業</label>
+                  <label class="form__checkbox"><input type="checkbox" name="inquiry[]" value="資料請求"> 資料請求</label>
+                  <label class="form__checkbox"><input type="checkbox" name="inquiry[]" value="入塾相談"> 入塾相談</label>
+                  <label class="form__checkbox"><input type="checkbox" name="inquiry[]" value="その他"> その他</label>
+                </div>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="message">メッセージ</label>
+                <textarea id="message" name="message" class="form__textarea" rows="6" placeholder="ご質問・ご要望がございましたらご記入ください"></textarea>
+              </div>
+
+              <div class="form__group">
+                <label class="form__checkbox form__checkbox--privacy">
+                  <input type="checkbox" name="privacy" required>
+                  <a href="#" target="_blank">プライバシーポリシー</a>に同意する
+                </label>
+              </div>
+
+              <div class="form__actions">
+                <button type="submit" class="btn btn--primary btn--lg btn--block">送信する</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="contact-layout__sidebar">
+            <!-- ★差替え：電話問い合わせ -->
+            <div class="contact-sidebar-card">
+              <h3 class="contact-sidebar-card__title">&#9742; お電話でのお問い合わせ</h3>
+              <a href="tel:03-1234-5678" class="contact-sidebar-card__phone">03-1234-5678</a>
+              <p class="contact-sidebar-card__time">受付時間：平日 14:00〜22:00 / 土曜 10:00〜20:00</p>
+            </div>
+
+            <!-- ★差替え：LINE問い合わせ -->
+            <div class="contact-sidebar-card">
+              <h3 class="contact-sidebar-card__title">LINE でのお問い合わせ</h3>
+              <p class="contact-sidebar-card__text">LINEでもお気軽にご相談いただけます。下記のボタンから友だち追加してください。</p>
+              <a href="#" class="btn btn--line btn--block">LINEで友だち追加</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ★差替え：よくある質問 -->
+    <section class="section section--bg" id="faq">
+      <div class="container">
+        <div class="section-title">
+          <span class="section-title__label">FAQ</span>
+          <h2 class="section-title__heading">よくある質問</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary class="faq-item__question">無料体験授業はどのような内容ですか？</summary>
+            <div class="faq-item__answer">
+              <p>実際の授業と同じ形式で、1コマ分（小学生50分、中高生80分）の授業を無料で体験いただけます。お子さまの現在の学力を把握した上で、最適なコースをご提案いたします。</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__question">途中でコースの変更はできますか？</summary>
+            <div class="faq-item__answer">
+              <p>はい、可能です。月単位でコースの変更（回数の増減・科目変更など）を承っております。お子さまの状況に合わせて柔軟に対応いたしますので、お気軽にご相談ください。</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__question">入塾テストはありますか？</summary>
+            <div class="faq-item__answer">
+              <p>入塾テストはございません。ただし、お子さまの現在の学力を把握するため、簡単な学力診断テストを受けていただいております。このテストの結果をもとに、最適な学習プランをご提案いたします。</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <div class="footer__logo"><img src="../images/logo.svg" alt="進学ゼミナール" width="200" height="50"></div>
+        <p class="footer__catchcopy">ワンランク上の志望校を目指す。</p>
+        <dl class="footer__info"><dt>住所</dt><dd>〒154-0024 東京都世田谷区三軒茶屋1-2-3 三茶ビル3F</dd><dt>電話番号</dt><dd>TEL: 03-1234-5678</dd><dt>営業時間</dt><dd>平日 14:00〜22:00 / 土曜 10:00〜20:00</dd></dl>
+        <div class="footer__sns"><a href="#" aria-label="Instagram">&#9679;</a><a href="#" aria-label="LINE">&#9679;</a></div>
+      </div>
+      <div><p class="footer__nav-title">ページ</p><ul class="footer__nav-list"><li><a href="../">ホーム</a></li><li><a href="../courses/">コース・料金</a></li><li><a href="../teachers/">講師紹介</a></li><li><a href="../access/">教室案内</a></li></ul></div>
+      <div><p class="footer__nav-title">情報</p><ul class="footer__nav-list"><li><a href="../blog/">ブログ</a></li><li><a href="./">お問い合わせ</a></li><li><a href="#">プライバシーポリシー</a></li></ul></div>
+      <div><p class="footer__nav-title">お問い合わせ</p><ul class="footer__nav-list"><li><a href="tel:03-1234-5678">03-1234-5678</a></li><li><a href="./">無料体験のお申し込み</a></li><li><a href="./">資料請求</a></li></ul></div>
+    </div>
+    <div class="footer__bottom"><p class="footer__copyright">&copy; 2026 進学ゼミナール All Rights Reserved.</p></div>
+  </footer>
+  <div class="cta-bar">
+    <div class="cta-bar__inner">
+      <a href="tel:03-1234-5678" class="cta-bar__phone"><span class="cta-bar__phone-icon">&#9742;</span><span class="cta-bar__phone-number">03-1234-5678</span><span class="cta-bar__phone-time">平日14:00〜22:00</span></a>
+      <a href="./" class="cta-bar__button">&#9998; 無料体験・資料請求</a>
+    </div>
+  </div>
+  <script src="../js/main.js"></script>
+</body>
+</html>

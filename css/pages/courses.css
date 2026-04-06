@@ -1,0 +1,301 @@
+/* ============================================
+   Courses & Pricing Page Styles
+   ============================================ */
+
+/* --- Course Blocks Grid --- */
+.course-blocks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.course-block {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-block:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* --- Course Block Header --- */
+.course-block__header {
+  background: var(--color-dark, #1B2A4A);
+  color: #fff;
+  padding: 1.25rem 1.5rem;
+  position: relative;
+}
+
+.course-block__header h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+}
+
+.course-block__header--accent {
+  background: linear-gradient(135deg, var(--color-primary, #2563EB), #1d4ed8);
+}
+
+/* --- Badge --- */
+.course-block__badge {
+  display: inline-block;
+  background: var(--color-accent, #F59E0B);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+  margin-bottom: 0.5rem;
+}
+
+/* --- Course Block Body --- */
+.course-block__body {
+  padding: 1.5rem;
+}
+
+.course-block__body > p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--color-text, #333);
+  margin-bottom: 1rem;
+}
+
+/* --- Price --- */
+.course-block__price {
+  font-size: 1rem;
+  color: var(--color-text, #333);
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.course-block__price strong {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--color-primary, #2563EB);
+  letter-spacing: -0.02em;
+}
+
+.course-block__price small {
+  font-size: 0.9rem;
+}
+
+/* --- Features List --- */
+.course-block__features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.course-block__features li {
+  padding: 0.4rem 0;
+  font-size: 0.9rem;
+  color: var(--color-text, #333);
+  border-bottom: 1px dotted #e5e7eb;
+}
+
+.course-block__features li:last-child {
+  border-bottom: none;
+}
+
+/* --- Price Table --- */
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 2rem;
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  min-width: 560px;
+}
+
+.price-table thead th {
+  background: var(--color-dark, #1B2A4A);
+  color: #fff;
+  font-weight: 700;
+  padding: 1rem 1.25rem;
+  text-align: center;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.price-table tbody th {
+  background: var(--color-primary-lightest, #eff6ff);
+  font-weight: 700;
+  text-align: center;
+  padding: 1rem 1.25rem;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  color: var(--color-dark, #1B2A4A);
+}
+
+.price-table tbody td {
+  text-align: center;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-bottom: 1px solid #f0f0f0;
+  color: var(--color-text, #333);
+}
+
+.price-table tbody tr:hover td {
+  background: #fafbff;
+}
+
+/* --- Schedule Table --- */
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  min-width: 480px;
+}
+
+.schedule-table thead th {
+  background: var(--color-dark, #1B2A4A);
+  color: #fff;
+  font-weight: 700;
+  padding: 0.875rem 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.schedule-table tbody th {
+  background: var(--color-primary-lightest, #eff6ff);
+  font-weight: 700;
+  text-align: center;
+  padding: 0.875rem 1rem;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  color: var(--color-dark, #1B2A4A);
+}
+
+.schedule-table tbody td {
+  text-align: center;
+  padding: 0.875rem 1rem;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #f0f0f0;
+  color: var(--color-primary, #2563EB);
+  font-weight: 500;
+}
+
+.schedule-note {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* --- Fee Notes --- */
+.fee-notes {
+  margin-top: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.fee-notes__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.fee-notes__item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--color-primary-lightest, #eff6ff);
+  border-radius: 8px;
+}
+
+.fee-notes__label {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--color-dark, #1B2A4A);
+  white-space: nowrap;
+  min-width: 100px;
+}
+
+.fee-notes__value {
+  font-size: 0.95rem;
+  color: var(--color-text, #333);
+}
+
+.fee-notes__note {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 768px) {
+  .course-blocks {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .fee-notes__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fee-notes__item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .fee-notes__label {
+    min-width: auto;
+  }
+
+  .fee-notes {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .course-block__price strong {
+    font-size: 1.6rem;
+  }
+
+  .course-block__header {
+    padding: 1rem 1.25rem;
+  }
+
+  .course-block__body {
+    padding: 1.25rem;
+  }
+
+  .price-table thead th,
+  .price-table tbody th,
+  .price-table tbody td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .schedule-table thead th,
+  .schedule-table tbody th,
+  .schedule-table tbody td {
+    padding: 0.625rem 0.5rem;
+    font-size: 0.85rem;
+  }
+}

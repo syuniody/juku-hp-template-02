@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 338">
+  <rect width="600" height="338" fill="#E8F0FE"/>
+  <rect x="180" y="80" width="240" height="140" rx="12" fill="#2563EB" opacity="0.12"/>
+  <rect x="220" y="110" width="160" height="12" rx="4" fill="#2563EB" opacity="0.3"/>
+  <rect x="220" y="130" width="120" height="12" rx="4" fill="#2563EB" opacity="0.2"/>
+  <rect x="220" y="150" width="140" height="12" rx="4" fill="#2563EB" opacity="0.2"/>
+  <rect x="220" y="180" width="80" height="24" rx="12" fill="#F59E0B" opacity="0.3"/>
+  <text x="300" y="290" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="13" fill="#94A3B8">学習法</text>
+</svg>

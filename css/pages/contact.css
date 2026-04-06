@@ -1,0 +1,330 @@
+/* ============================================
+   Contact Page Styles
+   ============================================ */
+
+/* --- Contact Layout --- */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 3rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+.contact-lead {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: var(--color-text, #333);
+  margin-bottom: 2rem;
+}
+
+/* --- Form --- */
+.form {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+}
+
+.form__group {
+  margin-bottom: 1.5rem;
+}
+
+.form__label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-dark, #1B2A4A);
+  margin-bottom: 0.5rem;
+}
+
+.form__required {
+  display: inline-block;
+  background: #ef4444;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.form__input,
+.form__select,
+.form__textarea {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--color-text, #333);
+  background: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.form__input:focus,
+.form__select:focus,
+.form__textarea:focus {
+  outline: none;
+  border-color: var(--color-primary, #2563EB);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.form__input::placeholder,
+.form__textarea::placeholder {
+  color: #bbb;
+}
+
+.form__select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23666' d='M1.41 0L6 4.58 10.59 0 12 1.41l-6 6-6-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+
+.form__textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* --- Checkboxes --- */
+.form__checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.form__checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--color-text, #333);
+  cursor: pointer;
+}
+
+.form__checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-primary, #2563EB);
+  cursor: pointer;
+}
+
+.form__checkbox--privacy {
+  font-size: 0.9rem;
+}
+
+.form__checkbox--privacy a {
+  color: var(--color-primary, #2563EB);
+  text-decoration: underline;
+}
+
+.form__checkbox--privacy a:hover {
+  text-decoration: none;
+}
+
+/* --- Form Actions --- */
+.form__actions {
+  margin-top: 2rem;
+}
+
+/* --- Sidebar Cards --- */
+.contact-sidebar-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.contact-sidebar-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-dark, #1B2A4A);
+  margin-bottom: 1rem;
+}
+
+.contact-sidebar-card__phone {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: var(--color-primary, #2563EB);
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.contact-sidebar-card__phone:hover {
+  opacity: 0.8;
+}
+
+.contact-sidebar-card__time {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.contact-sidebar-card__text {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--color-text, #333);
+  margin-bottom: 1rem;
+}
+
+/* --- LINE Button --- */
+.btn--line {
+  background: #06C755;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  padding: 0.875rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.btn--line:hover {
+  opacity: 0.9;
+}
+
+/* --- Section Title Left Aligned --- */
+.section-title--left {
+  text-align: left;
+}
+
+.section-title--left .section-title__heading::after {
+  margin-left: 0;
+}
+
+/* --- FAQ --- */
+.faq-list {
+  max-width: 800px;
+  margin: 2rem auto 0;
+}
+
+.faq-item {
+  background: #fff;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.faq-item__question {
+  padding: 1.25rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-dark, #1B2A4A);
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding-right: 3rem;
+  line-height: 1.6;
+}
+
+.faq-item__question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item__question::before {
+  content: "Q.";
+  color: var(--color-primary, #2563EB);
+  font-weight: 900;
+  margin-right: 0.5rem;
+}
+
+.faq-item__question::after {
+  content: "+";
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--color-primary, #2563EB);
+  transition: transform 0.2s ease;
+}
+
+.faq-item[open] .faq-item__question::after {
+  content: "−";
+}
+
+.faq-item__answer {
+  padding: 0 1.5rem 1.5rem;
+  padding-left: 3rem;
+}
+
+.faq-item__answer p {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: var(--color-text, #333);
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 768px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-layout__sidebar {
+    order: -1;
+  }
+
+  .form {
+    padding: 1.5rem;
+  }
+
+  .form__checkboxes {
+    flex-direction: column;
+  }
+
+  .faq-item__question {
+    font-size: 0.95rem;
+    padding: 1rem 1.25rem;
+    padding-right: 2.5rem;
+  }
+
+  .faq-item__answer {
+    padding: 0 1.25rem 1.25rem;
+    padding-left: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form {
+    padding: 1.25rem;
+  }
+
+  .form__input,
+  .form__select,
+  .form__textarea {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .contact-sidebar-card {
+    padding: 1.5rem;
+  }
+
+  .contact-sidebar-card__phone {
+    font-size: 1.5rem;
+  }
+
+  .faq-item__question {
+    font-size: 0.9rem;
+  }
+
+  .faq-item__answer p {
+    font-size: 0.9rem;
+  }
+}

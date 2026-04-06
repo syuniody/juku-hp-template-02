@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#F0F4FA"/>
+  <rect x="80" y="60" width="640" height="280" rx="12" fill="#DBEAFE"/>
+  <rect x="120" y="100" width="120" height="80" rx="6" fill="#2563EB" opacity="0.15"/>
+  <rect x="280" y="100" width="120" height="80" rx="6" fill="#2563EB" opacity="0.15"/>
+  <rect x="440" y="100" width="120" height="80" rx="6" fill="#2563EB" opacity="0.15"/>
+  <rect x="120" y="220" width="120" height="80" rx="6" fill="#2563EB" opacity="0.15"/>
+  <rect x="280" y="220" width="120" height="80" rx="6" fill="#2563EB" opacity="0.15"/>
+  <rect x="440" y="220" width="120" height="80" rx="6" fill="#2563EB" opacity="0.15"/>
+  <text x="400" y="410" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="14" fill="#94A3B8">自習スペース</text>
+</svg>
