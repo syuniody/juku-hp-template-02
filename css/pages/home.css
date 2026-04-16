@@ -1,0 +1,797 @@
+/* ===================================
+   Home Page — conojuku.co inspired layout
+   Template 02: Green + Yellow
+   =================================== */
+
+/* === ヒーロー（グリーン背景 + 左に写真重ね） === */
+.hero {
+  position: relative;
+  background: var(--color-primary);
+  padding: 0;
+  overflow: hidden;
+  min-height: 520px;
+}
+.hero__bg-green {
+  display: none;
+}
+.hero__inner {
+  display: grid;
+  grid-template-columns: 42% 1fr;
+  align-items: stretch;
+  position: relative;
+  z-index: 1;
+  min-height: 520px;
+}
+.hero__text-area {
+  padding: 60px 40px 60px 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero__catchcopy {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-extra-bold);
+  color: var(--color-white);
+  line-height: 1.35;
+  margin-bottom: 24px;
+}
+.hero__catchcopy-num {
+  font-size: 4.5rem;
+  font-style: italic;
+  color: var(--color-white);
+}
+.hero__catchcopy-large {
+  font-size: 3.5rem;
+  display: block;
+  margin-top: 8px;
+}
+.hero__price-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.hero__price-label-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-text);
+  font-size: 0.8125rem;
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  line-height: 1.3;
+}
+.hero__price-text {
+  font-size: 1.125rem;
+  color: var(--color-white);
+}
+.hero__price-text strong {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-extra-bold);
+}
+.hero__price-text small {
+  color: var(--color-white);
+}
+.hero__cta-area {
+  text-align: left;
+}
+.hero__cta-lead {
+  font-size: 1rem;
+  color: var(--color-white);
+  background: rgba(0,0,0,0.25);
+  display: inline-block;
+  padding: 8px 24px;
+  border-radius: var(--radius-full);
+  margin-bottom: 16px;
+}
+.hero__cta-btn {
+  font-size: 1.125rem;
+  padding: 18px 40px;
+}
+.hero__cta-free {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-white);
+  color: var(--color-accent-dark);
+  font-weight: var(--font-weight-bold);
+  font-size: 0.875rem;
+  padding: 2px 10px;
+  border-radius: var(--radius-sm);
+  margin-right: 8px;
+}
+.hero__photo {
+  position: relative;
+  overflow: hidden;
+  order: -1;
+}
+.hero__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0 16px 16px 0;
+}
+
+/* === ボタン追加バリエーション === */
+.btn--accent {
+  background: var(--color-accent);
+  color: var(--color-text);
+  border-color: var(--color-accent);
+  font-weight: var(--font-weight-bold);
+  box-shadow: 0 4px 14px rgba(255, 214, 0, 0.3);
+}
+.btn--accent:hover {
+  background: var(--color-accent-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 214, 0, 0.4);
+}
+.btn--outline-white {
+  background: transparent;
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+}
+.btn--outline-white:hover {
+  background: var(--color-white);
+  color: var(--color-primary);
+}
+
+/* === 数字で見る実績 === */
+.stats {
+  padding: 56px 0;
+  background: var(--color-white);
+  overflow: hidden;
+}
+.stats__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.stats__item {
+  position: relative;
+  padding: 24px;
+}
+.stats__item::before,
+.stats__item::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 80px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 80'%3E%3Cpath d='M30 5C15 15 5 30 5 40s10 25 25 35' fill='none' stroke='%230B9444' stroke-width='2' opacity='0.3'/%3E%3C/svg%3E") no-repeat;
+}
+.stats__item::before { left: -20px; }
+.stats__item::after { right: -20px; transform: translateY(-50%) scaleX(-1); }
+.stats__top {
+  font-size: 1rem;
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+}
+.stats__number {
+  font-size: 3rem;
+  font-weight: var(--font-weight-extra-bold);
+  color: var(--color-primary);
+  line-height: 1.2;
+  margin: 4px 0;
+}
+.stats__bottom {
+  font-size: 1rem;
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+}
+
+/* === キャンペーンバナー === */
+.banners__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.banner-card {
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  text-align: center;
+  overflow: hidden;
+}
+.banner-card--pink { background: #FFF0F0; }
+.banner-card--yellow { background: var(--color-accent-light); }
+.banner-card__badge {
+  display: inline-block;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: 4px 16px;
+  font-size: 0.8125rem;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 12px;
+}
+.banner-card__title {
+  font-size: 1.75rem;
+  font-weight: var(--font-weight-extra-bold);
+  color: var(--color-primary);
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+.banner-card__price {
+  font-size: 1.125rem;
+  color: var(--color-text);
+}
+.banner-card__price strong {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-extra-bold);
+  color: var(--color-accent-dark);
+}
+.banner-card__free {
+  color: #E53E3E;
+  font-size: 2rem;
+  font-weight: var(--font-weight-extra-bold);
+}
+
+/* === お悩みセクション === */
+.concerns__heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: var(--font-weight-extra-bold);
+  color: var(--color-text);
+  margin-bottom: 48px;
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-underline-offset: 8px;
+}
+.concerns__visual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+.concerns__bubbles {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.concerns__bubble {
+  background: #F5F5F5;
+  border-radius: var(--radius-lg);
+  padding: 16px 24px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  max-width: 320px;
+}
+.concerns__bubble--left { align-self: flex-start; }
+.concerns__bubble--right { align-self: flex-end; }
+.concerns__illustration {
+  text-align: center;
+}
+.concerns__illustration img {
+  max-width: 280px;
+  margin: 0 auto;
+}
+.concerns__answer {
+  text-align: center;
+}
+.concerns__arrow {
+  color: var(--color-primary);
+  font-size: 2rem;
+  margin-bottom: 16px;
+  animation: bounceDown 1s infinite;
+}
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+.concerns__answer-text {
+  font-size: 1.375rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+}
+.concerns__answer-text strong {
+  color: var(--color-primary);
+}
+
+/* === 特徴（写真＋テキスト交互レイアウト） === */
+.section--primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 80px 0;
+}
+.feature-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 64px;
+}
+.feature-row--reverse {
+  direction: rtl;
+}
+.feature-row--reverse > * {
+  direction: ltr;
+}
+.feature-row__title {
+  font-size: 1.75rem;
+  font-weight: var(--font-weight-extra-bold);
+  color: var(--color-white);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.feature-row__highlight {
+  background: linear-gradient(transparent 60%, rgba(255, 214, 0, 0.4) 60%);
+  padding: 0 4px;
+}
+.feature-row__desc {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.9);
+}
+.feature-row__photo img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+.feature-row__cta {
+  text-align: center;
+  margin-top: 16px;
+}
+
+/* === セクション見出し（下線付き） === */
+.section-heading-underline {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: var(--font-weight-extra-bold);
+  color: var(--color-text);
+  margin-bottom: 48px;
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-decoration-thickness: 4px;
+  text-underline-offset: 10px;
+}
+
+/* === コース・料金（タブ切替） === */
+.course-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 0;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius) var(--radius) 0 0;
+  overflow: hidden;
+}
+.course-tab {
+  flex: 1;
+  padding: 16px;
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  color: var(--color-primary);
+  background: var(--color-white);
+  cursor: pointer;
+  border-right: 1px solid var(--color-primary);
+  transition: all 0.2s;
+}
+.course-tab:last-child { border-right: none; }
+.course-tab.is-active {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+.course-tab:hover:not(.is-active) {
+  background: var(--color-primary-light);
+}
+.course-panel {
+  display: none;
+  border: 2px solid var(--color-primary);
+  border-top: none;
+  border-radius: 0 0 var(--radius) var(--radius);
+  padding: 40px;
+  background: var(--color-white);
+}
+.course-panel.is-active {
+  display: block;
+}
+.course-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  background: var(--color-primary);
+  border-radius: var(--radius);
+  padding: 24px 32px;
+  color: var(--color-white);
+}
+.course-panel__koma {
+  display: inline-block;
+  border: 2px solid var(--color-white);
+  border-radius: var(--radius-sm);
+  padding: 6px 16px;
+  font-weight: var(--font-weight-bold);
+  margin-right: 16px;
+}
+.course-panel__price {
+  font-size: 1.25rem;
+}
+.course-panel__price strong {
+  font-size: 3rem;
+  font-weight: var(--font-weight-extra-bold);
+}
+.course-panel__price,
+.course-panel__price small {
+  color: var(--color-white);
+}
+.course-panel__illust img {
+  max-height: 120px;
+  width: auto;
+}
+.course-panel__features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.course-feature-card {
+  background: var(--color-primary-light);
+  border-radius: var(--radius);
+  padding: 24px 16px;
+  text-align: center;
+}
+.course-feature-card__icon {
+  margin-bottom: 12px;
+}
+.course-feature-card__icon img {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+}
+.course-feature-card__text {
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+.course-note {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+/* === 他塾比較 === */
+.section--bg-light {
+  background: var(--color-bg-alt);
+}
+.comparison__sub {
+  text-align: center;
+  font-size: 0.9375rem;
+  color: var(--color-text-light);
+  margin-top: -32px;
+  margin-bottom: 40px;
+}
+.comparison__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.comparison__card {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  text-align: center;
+  border: 2px solid var(--color-border);
+}
+.comparison__card--ours {
+  border-color: var(--color-primary);
+  position: relative;
+}
+.comparison__card-name {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+  background: var(--color-primary);
+  border-radius: var(--radius-sm);
+  padding: 8px 16px;
+  margin-bottom: 16px;
+}
+.comparison__card:not(.comparison__card--ours) .comparison__card-name {
+  background: #999;
+}
+.comparison__card-badge {
+  display: inline-block;
+  background: var(--color-accent);
+  color: var(--color-text);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  margin-bottom: 8px;
+}
+.comparison__card-koma {
+  font-size: 0.9375rem;
+  color: var(--color-text-light);
+  margin-bottom: 4px;
+}
+.comparison__card-price {
+  margin-bottom: 4px;
+}
+.comparison__card-price strong {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-extra-bold);
+  color: var(--color-text);
+}
+.comparison__card--ours .comparison__card-price strong {
+  color: var(--color-primary);
+}
+.comparison__card-note {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+.comparison__card-save {
+  background: var(--color-accent);
+  color: var(--color-text);
+  font-weight: var(--font-weight-bold);
+  font-size: 0.9375rem;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  margin-top: 12px;
+  display: inline-block;
+}
+
+/* === 成績UP事例 === */
+.achievement__lead {
+  text-align: center;
+  font-size: 1.375rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: 40px;
+}
+.achievement__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.achievement__card {
+  background: var(--color-primary);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.achievement__card-header {
+  padding: 24px 28px;
+  color: var(--color-white);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.achievement__card-header strong {
+  color: var(--color-accent);
+  font-size: 1.125rem;
+}
+.achievement__card-graph {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 24px;
+  padding: 24px 28px 16px;
+  background: rgba(255,255,255,0.1);
+  height: 220px;
+}
+.achievement__bar {
+  text-align: center;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+}
+.achievement__bar-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+  margin-bottom: 8px;
+}
+.achievement__bar-fill {
+  width: 100%;
+  background: rgba(255,255,255,0.3);
+  border-radius: 4px 4px 0 0;
+}
+.achievement__bar--accent .achievement__bar-fill {
+  background: var(--color-accent);
+}
+.achievement__arrow {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-extra-bold);
+  color: var(--color-accent);
+  align-self: center;
+  padding-bottom: 32px;
+}
+
+/* === 合格体験記 === */
+.voice__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.voice__item {
+  display: flex;
+  gap: 24px;
+  background: var(--color-white);
+  border-radius: var(--radius);
+  padding: 32px;
+  box-shadow: var(--shadow);
+  align-items: start;
+}
+.voice__item-body { flex: 1; }
+.voice__item-title {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+.voice__item-text {
+  font-size: 0.9375rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+}
+.voice__item-source {
+  margin-top: 12px;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+.voice__item-photo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* === アクセス === */
+.access__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.access__map { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.access__map iframe { width: 100%; height: 360px; display: block; }
+.access__info-item { display: flex; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--color-border); font-size: 0.9375rem; }
+.access__info-item:last-child { border-bottom: none; }
+.access__info-label { flex-shrink: 0; width: 80px; font-weight: var(--font-weight-bold); color: var(--color-primary); }
+
+/* === CTA セクション === */
+.cta-section {
+  padding: 56px 0;
+}
+.cta-section__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+.cta-section__box {
+  text-align: center;
+}
+.cta-section__lead {
+  font-size: 1.125rem;
+  color: var(--color-white);
+  margin-bottom: 20px;
+  font-weight: var(--font-weight-bold);
+}
+.cta-section__phone {
+  font-size: 2.25rem;
+  font-weight: var(--font-weight-extra-bold);
+  color: var(--color-white);
+}
+.cta-section__phone-time {
+  margin-top: 8px;
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.7);
+}
+
+/* === 固定CTAバー（conojuku式） === */
+.cta-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 900;
+  background: var(--color-bg-dark);
+  padding: 12px 24px;
+}
+.cta-bar__inner {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  gap: 16px;
+}
+.cta-bar__btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  border-radius: var(--radius-full);
+  font-weight: var(--font-weight-bold);
+  font-size: 1.0625rem;
+  transition: all 0.2s;
+  text-align: center;
+  white-space: nowrap;
+}
+.cta-bar__btn--accent {
+  background: var(--color-accent);
+  color: var(--color-text);
+}
+.cta-bar__btn--accent:hover {
+  background: var(--color-accent-dark);
+}
+.cta-bar__btn--outline {
+  background: transparent;
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+}
+.cta-bar__btn--outline:hover {
+  background: var(--color-white);
+  color: var(--color-bg-dark);
+}
+.has-cta-bar {
+  padding-bottom: 72px;
+}
+
+/* ===================================
+   レスポンシブ
+   =================================== */
+@media (max-width: 768px) {
+  .hero { min-height: auto; }
+  .hero__inner { grid-template-columns: 1fr; min-height: auto; }
+  .hero__text-area { padding: 40px 0; text-align: center; }
+  .hero__catchcopy { font-size: 1.75rem; }
+  .hero__catchcopy-num { font-size: 2.5rem; }
+  .hero__catchcopy-large { font-size: 2.25rem; }
+  .hero__price-badge { justify-content: center; }
+  .hero__cta-area { text-align: center; }
+  .hero__photo { display: none; }
+
+  .stats__grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .stats__number { font-size: 2rem; }
+  .stats__item::before, .stats__item::after { display: none; }
+
+  .banners__grid { grid-template-columns: 1fr; }
+
+  .concerns__visual { grid-template-columns: 1fr; }
+  .concerns__illustration { display: none; }
+
+  .feature-row { grid-template-columns: 1fr; gap: 24px; }
+  .feature-row--reverse { direction: ltr; }
+  .feature-row__title { font-size: 1.375rem; }
+
+  .course-tabs { flex-direction: column; }
+  .course-tab { border-right: none; border-bottom: 1px solid var(--color-primary); }
+  .course-tab:last-child { border-bottom: none; }
+  .course-panel { padding: 24px; }
+  .course-panel__header { flex-direction: column; gap: 16px; text-align: center; }
+  .course-panel__features { grid-template-columns: repeat(2, 1fr); }
+
+  .comparison__grid { grid-template-columns: 1fr; max-width: 360px; }
+
+  .achievement__cards { grid-template-columns: 1fr; }
+
+  .voice__item { flex-direction: column; text-align: center; }
+  .voice__item-photo { margin: 0 auto; }
+
+  .access__inner { grid-template-columns: 1fr; }
+
+  .cta-section__grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .hero__catchcopy { font-size: 1.375rem; }
+  .hero__catchcopy-large { font-size: 1.75rem; }
+  .hero__price-text strong { font-size: 1.75rem; }
+  .stats__number { font-size: 1.5rem; }
+  .course-panel__features { grid-template-columns: 1fr; }
+  .comparison__card-price strong { font-size: 1.75rem; }
+}

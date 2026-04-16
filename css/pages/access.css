@@ -1,0 +1,211 @@
+/* ============================================
+   Access / Classroom Page Styles
+   ============================================ */
+
+/* --- Gallery Grid --- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.gallery-item {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  background: #fff;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.03);
+}
+
+.gallery-item__caption {
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-dark, #1B2A4A);
+  text-align: center;
+}
+
+/* --- Map --- */
+.map-wrapper {
+  margin-top: 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+}
+
+.map-wrapper iframe {
+  display: block;
+  width: 100%;
+  height: 450px;
+}
+
+/* --- Access Details --- */
+.access-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+/* --- Access Table --- */
+.access-table-wrapper {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.access-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.access-table th {
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-dark, #1B2A4A);
+  padding: 1rem 1rem 1rem 0;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap;
+  vertical-align: top;
+  width: 100px;
+}
+
+.access-table td {
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text, #333);
+}
+
+.access-table a {
+  color: var(--color-primary, #2563EB);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.access-table a:hover {
+  text-decoration: underline;
+}
+
+/* --- Directions --- */
+.access-directions {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.access-directions__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-dark, #1B2A4A);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--color-primary, #2563EB);
+}
+
+.access-directions__steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.access-directions__steps li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px dotted #e5e7eb;
+}
+
+.access-directions__steps li:last-child {
+  border-bottom: none;
+}
+
+.access-directions__step-number {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--color-primary, #2563EB);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 50%;
+}
+
+.access-directions__steps li p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--color-text, #333);
+  padding-top: 0.2rem;
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .gallery-item img {
+    height: 200px;
+  }
+
+  .map-wrapper iframe {
+    height: 320px;
+  }
+
+  .access-details {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .access-table-wrapper,
+  .access-directions {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-item img {
+    height: 180px;
+  }
+
+  .map-wrapper iframe {
+    height: 260px;
+  }
+
+  .access-table th {
+    font-size: 0.8rem;
+    width: 80px;
+  }
+
+  .access-table td {
+    font-size: 0.85rem;
+  }
+
+  .access-table-wrapper,
+  .access-directions {
+    padding: 1.25rem;
+  }
+}
